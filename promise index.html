@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise-palindrome</title>
+</head>
+<body>
+    
+    <script>
+        //promise function in palindrome
+
+                function checks(s){
+   
+   let a=121
+   let b=0
+   while(a!=0){
+       rem=a%10
+       a=(a-rem)/10
+       b=(b*10)+rem
+   }
+   return new Promise ((re,rj)=>
+{
+   if(s===b){
+       re(s)
+   }
+   else{
+       rj(s)
+   }
+   
+})
+}
+checks(121).then((result) => {
+    console.log(`${result}is palindrome`)
+}).catch((err) => {
+    console.log(`${err}is not palindrome`)
+});
+
+                
+    </script>
+</body>
+</html>

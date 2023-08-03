@@ -12,7 +12,7 @@
 
                 function checks(s){
    
-   let a=121
+   let a=parseInt(prompt("Enter The Number"))
    let b=0
    while(a!=0){
        rem=a%10
@@ -30,7 +30,7 @@
    
 })
 }
-checks(121).then((result) => {
+checks(a).then((result) => {
     console.log(`${result}is palindrome`)
 }).catch((err) => {
     console.log(`${err}is not palindrome`)

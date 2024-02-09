@@ -32,7 +32,7 @@
 }
 checks(an).then((result) => {
     alert(`${result}is palindrome`)
-    result.preventDefault()
+    result.preventDefault(false)
 }).catch((err) => {
     alert(`${err}is not palindrome`)
 });
